@@ -25,10 +25,7 @@ module.exports = {
     'object-curly-spacing': [2, 'always'],
     'no-multi-spaces': ['error', { exceptions: { ImportDeclaration: true } }],
     'no-duplicate-imports': ['error', { includeExports: true }],
-    "object-curly-newline": [
-      "error",
-      { "ObjectExpression": { "minProperties": 2 } }
-    ],
+    "object-curly-newline": ['error'],
     'import/prefer-default-export': 'off',
     'prefer-promise-reject-errors': 'off',
     '@typescript-eslint/ban-ts-comment': 'off',
@@ -95,12 +92,12 @@ module.exports = {
       "error",
       [{ blankLine: "always", prev: "*", next: "*" }],
     ],
-    "no-multiple-empty-lines": [
-      "error",
+    'no-multiple-empty-lines': [
+      'error',
       {
-        "max": 1,
-        "maxEOF": 0,
-        "maxBOF": 0
+        'max': 1,
+        'maxEOF': 0,
+        'maxBOF': 0
       }
     ]
   },

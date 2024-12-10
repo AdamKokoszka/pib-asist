@@ -9,7 +9,9 @@ export const useCounterStore = defineStore('counter', () => {
     globalColor.value = 'ffff00'
   }
 
-  return { globalColor,
+  return {
+ globalColor,
     changeColor,
-    globalDate }
+    globalDate 
+}
 })
