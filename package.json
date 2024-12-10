@@ -12,7 +12,7 @@
     "lint": "eslint ./src --ext .js,.vue",
     "lint:debug": "eslint ./src --ext .js,.vue --debug",
     "lint:fix": "eslint ./src --ext .js,.vue --fix",
-    "prepare": "husky install"
+    "prepare": "husky"
   },
   "dependencies": {
     "@primevue/themes": "^4.2.4",
@@ -42,5 +42,8 @@
     "vite-plugin-vue-devtools": "^7.6.5",
     "vue-eslint-parser": "^9.4.3",
     "vue-tsc": "^2.1.10"
+  },
+  "lint-staged": {
+    "**/*.{js,vue,ts}": "eslint . --fix"
   }
 }
