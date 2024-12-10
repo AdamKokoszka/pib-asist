@@ -18,22 +18,79 @@ module.exports = {
   },
   plugins: ["vue", "@typescript-eslint", "tailwindcss"],
   rules: {
+    'no-param-reassign': [2, { props: false }],
+    quotes: [2, 'single', { avoidEscape: true }],
+    'no-console': 'error',
+    'no-debugger': 'error',
+    'object-curly-spacing': [2, 'always'],
+    'no-multi-spaces': ['error', { exceptions: { ImportDeclaration: true } }],
+    'no-duplicate-imports': ['error', { includeExports: true }],
+    "object-curly-newline": [
+      "error",
+      { "ObjectExpression": { "minProperties": 2 } }
+    ],
+    'import/prefer-default-export': 'off',
+    'prefer-promise-reject-errors': 'off',
+    '@typescript-eslint/ban-ts-comment': 'off',
+    'max-len': ['error', 200],
+    'no-shadow': 'off',
+    'vue/no-mutating-props': [
+      'error',
+      {
+        'shallowOnly': true
+      }
+    ],
+    'vue/script-setup-uses-vars': 'error',
+    'vue/multiline-html-element-content-newline': [
+      'error',
+      {
+        'ignoreWhenEmpty': true,
+        'allowEmptyLines': true
+      }
+    ],
+    'vue/first-attribute-linebreak': [
+      'error',
+      {
+        singleline: 'ignore',
+        multiline: 'beside',
+      },
+    ],
+    'vue/max-attributes-per-line': [
+      'error',
+      {
+        singleline: 1,
+        multiline: {
+          max: 1,
+        },
+      },
+    ],
+    'vue/html-indent': [
+      'error',
+      2,
+      {
+        attribute: 2,
+        baseIndent: 1,
+        closeBracket: 0,
+        alignAttributesVertically: true
+      },
+    ],
+    'vue/html-closing-bracket-newline': [
+      'error',
+      {
+        singleline: 'never',
+        multiline: 'never',
+      },
+    ],
+    'vue/no-reserved-component-names': [
+      'error',
+      {
+        disallowVueBuiltInComponents: true,
+        disallowVue3BuiltInComponents: true,
+      },
+    ],
+    'vue/padding-line-between-blocks': ['error', 'always'],
     "tailwindcss/no-custom-classname": "off",
     "vue/no-multiple-template-root": "off",
-    "vue/first-attribute-linebreak": [
-      "error",
-      { singleline: "ignore", multiline: "beside" },
-    ],
-    "vue/html-indent": [
-      "error",
-      2,
-      { attribute: 2, baseIndent: 1, closeBracket: 0 },
-    ],
-    "vue/html-closing-bracket-newline": [
-      "error",
-      { singleline: "never", multiline: "never" },
-    ],
-    "vue/padding-line-between-blocks": ["error", "always"],
     "vue/padding-line-between-tags": [
       "error",
       [{ blankLine: "always", prev: "*", next: "*" }],

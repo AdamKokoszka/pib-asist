@@ -6,12 +6,10 @@ import { ref } from 'vue'
 import { useCounterStore } from '@/stores/counter.ts'
 import { storeToRefs } from 'pinia'
 
-defineProps({
-  msg: {
+defineProps({ msg: {
     type: String,
     default: ''
-  }
-})
+  } })
 
 const store = useCounterStore()
 
@@ -23,18 +21,17 @@ setTimeout(() => {
   store.changeColor()
   colorPickerKey.value++
 }, 4000)
-console.log('This is a debug message.');
 
 const color = ref('000000')
 </script>
 
 <template>
   <div class="greetings">
-    <div>
+    <div class="pt-5"
+         :class="{'pr-6': true}">
+
       kokoso
     </div>
-
-    <div>psdof</div>
 
     <h1 class="green">
       {{ msg }} | {{ globalColor }}
