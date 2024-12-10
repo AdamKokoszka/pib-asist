@@ -23,6 +23,7 @@ setTimeout(() => {
   store.changeColor()
   colorPickerKey.value++
 }, 4000)
+console.log('This is a debug message.');
 
 const color = ref('000000')
 </script>
