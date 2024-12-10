@@ -29,8 +29,10 @@ const color = ref('000000')
 
 <template>
   <div class="greetings">
-    <div>kokos
+    <div>
+      kokoso
     </div>
+
     <div>psdof</div>
 
     <h1 class="green">
