@@ -47,20 +47,16 @@ const color = ref('000000')
 
     <p>koko | {{ color }}</p>
 
-    <p>kokos</p>
-
     <div>
       <div class="block p-3 text-sm">
         <div class="p-4"
              :class="{'p-3': true}">
-          <div>kokos</div>
+          <div>kokos | {{ $t('common.DASHBOARD') }} | klfjkjwdbfkbhd</div>
         </div>
 
         <a href="https://vite.dev/"
            target="_blank"
-           rel="noopener">
-          kokos
-        </a>
+           rel="noopener" />
       </div>
 
       <p>kokos</p>
@@ -86,7 +82,14 @@ const color = ref('000000')
                 fluid
                 icon-display="input"
                 :disabled-dates="[new Date('12-12-2024'), new Date('12-21-2024')]"
-                class="w-44" />
+                class="w-44"
+                :pt="{
+                  day: ({ }) => ({
+                    class: {
+                      'bg-red-500': true
+                    }
+                  })
+                }" />
     {{ globalDate }}
   </div>
 </template>

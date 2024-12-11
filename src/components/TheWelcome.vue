@@ -21,7 +21,7 @@ import SupportIcon from '@/components/icons/IconSupport.vue'
        target="_blank"
        rel="noopener">official documentation</a>
 
-    provides you with all information you need to get started.
+    provides you with all information you need to get started. {{ $t('koko') }}
   </WelcomeItem>
 
   <WelcomeItem>

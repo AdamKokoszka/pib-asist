@@ -10,13 +10,13 @@ module.exports = {
     'plugin:@typescript-eslint/recommended',
     'plugin:tailwindcss/recommended',
   ],
-  parser: "vue-eslint-parser",
+  parser: 'vue-eslint-parser',
   parserOptions: {
-    parser: "@typescript-eslint/parser",
+    parser: '@typescript-eslint/parser',
     ecmaVersion: 2020,
-    sourceType: "module",
+    sourceType: 'module',
   },
-  plugins: ["vue", "@typescript-eslint", "tailwindcss"],
+  plugins: ['vue', '@typescript-eslint', 'tailwindcss'],
   rules: {
     'no-param-reassign': [2, { props: false }],
     quotes: [2, 'single', { avoidEscape: true }],
@@ -28,15 +28,21 @@ module.exports = {
     'object-curly-newline': [
       'error',
       {
-        "ObjectExpression": { "multiline": true, "minProperties": 2 },
-        "ObjectPattern": { "multiline": true },
-        "ImportDeclaration": { "multiline": true }
+        'ObjectExpression': { 'multiline': true, 'minProperties': 2 },
+        'ObjectPattern': { 'multiline': true },
+        'ImportDeclaration': { 'multiline': true }
       }
     ],
     'import/prefer-default-export': 'off',
     'prefer-promise-reject-errors': 'off',
     '@typescript-eslint/ban-ts-comment': 'off',
-    'max-len': ['error', 200],
+    'max-len': [
+      'error',
+      {
+        code: 200,
+        ignorePattern: '<path\\b|<svg\\b'
+      }
+    ],
     'no-shadow': 'off',
     'vue/no-mutating-props': [
       'error',
@@ -93,11 +99,11 @@ module.exports = {
       },
     ],
     'vue/padding-line-between-blocks': ['error', 'always'],
-    "tailwindcss/no-custom-classname": "off",
-    "vue/no-multiple-template-root": "off",
-    "vue/padding-line-between-tags": [
-      "error",
-      [{ blankLine: "always", prev: "*", next: "*" }],
+    'tailwindcss/no-custom-classname': 'off',
+    'vue/no-multiple-template-root': 'off',
+    'vue/padding-line-between-tags': [
+      'error',
+      [{ blankLine: 'always', prev: '*', next: '*' }],
     ],
     'no-multiple-empty-lines': [
       'error',

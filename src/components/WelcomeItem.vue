@@ -2,8 +2,6 @@
   <div class="item">
     <i>
       <slot name="icon" />
-
-      <span>kokos</span>
     </i>
 
     <div class="details">

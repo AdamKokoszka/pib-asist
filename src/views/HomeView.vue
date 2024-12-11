@@ -5,7 +5,7 @@ import TheWelcome from '../components/TheWelcome.vue'
 <template>
   <main>
     <p class="block w-fit bg-red-500">
-      kokos
+      {{ $t('common.DASHBOARD') }} | {{ $t('asdasd') }}
     </p>
 
     <TheWelcome />
