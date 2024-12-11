@@ -6,14 +6,22 @@ import { ref } from 'vue'
 import { useCounterStore } from '@/stores/counter.ts'
 import { storeToRefs } from 'pinia'
 
-defineProps({ msg: {
+defineProps({
+ msg: {
     type: String,
     default: ''
-  } })
+  }
+})
 
 const store = useCounterStore()
 
 const { globalColor, globalDate } = storeToRefs(store)
+
+const kokos = ref({
+ obj1: 'val1', obj2: 'val2', obj3: 'val3'
+})
+
+const { obj1, obj2 } = kokos.value
 
 const colorPickerKey = ref(0);
 
@@ -30,7 +38,7 @@ const color = ref('000000')
     <div class="pt-5"
          :class="{'pr-6': true}">
 
-      kokoso
+      {{ kokos }} | {{ obj1 }} | {{ obj2 }}
     </div>
 
     <h1 class="green">
