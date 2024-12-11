@@ -5,10 +5,10 @@ module.exports = {
     node: true
   },
   extends: [
-    "eslint:recommended",
-    "plugin:vue/vue3-recommended",
-    "plugin:@typescript-eslint/recommended",
-    "plugin:tailwindcss/recommended",
+    'eslint:recommended',
+    'plugin:vue/vue3-recommended',
+    'plugin:@typescript-eslint/recommended',
+    'plugin:tailwindcss/recommended',
   ],
   parser: "vue-eslint-parser",
   parserOptions: {
