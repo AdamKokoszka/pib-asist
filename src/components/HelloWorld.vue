@@ -18,7 +18,7 @@ const store = useCounterStore()
 const { globalColor, globalDate } = storeToRefs(store)
 
 const kokos = ref({
- obj1: 'val1', obj2: 'val2', obj3: 'val3'
+  obj1: 'val1', obj2: 'val2', obj3: 'val3'
 })
 
 const { obj1, obj2 } = kokos.value
