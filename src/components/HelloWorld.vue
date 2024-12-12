@@ -17,11 +17,7 @@ const store = useCounterStore()
 
 const { globalColor, globalDate } = storeToRefs(store)
 
-const kokos = ref({
-  obj1: 'val1', obj2: 'val2', obj3: 'val3'
-})
-
-const { obj1, obj2 } = kokos.value
+store.getGeneralSettings()
 
 const colorPickerKey = ref(0);
 
@@ -30,22 +26,14 @@ setTimeout(() => {
   colorPickerKey.value++
 }, 4000)
 
-const color = ref('000000')
 </script>
 
 <template>
   <div class="greetings">
-    <div class="pt-5"
-         :class="{'pr-6': true}">
-
-      {{ kokos }} | {{ obj1 }} | {{ obj2 }}
-    </div>
 
     <h1 class="green">
       {{ msg }} | {{ globalColor }}
     </h1>
-
-    <p>koko | {{ color }}</p>
 
     <div>
       <div class="block p-3 text-sm">
@@ -61,8 +49,7 @@ const color = ref('000000')
 
       <p>kokos</p>
 
-      <Button label="Click Me pls"
-              class="block bg-red-500 text-lg" />
+      <Button label="Click Me pls" />
 
       <a href="https://vuejs.org/"
          target="_blank"
