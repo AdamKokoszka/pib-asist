@@ -18,6 +18,7 @@
     "@primevue/themes": "^4.2.4",
     "@vee-validate/zod": "^4.14.7",
     "axios": "^1.7.9",
+    "lodash-es": "^4.17.21",
     "pinia": "^2.2.6",
     "primevue": "^4.2.4",
     "tailwindcss-primeui": "^0.3.4",
@@ -29,6 +30,7 @@
   },
   "devDependencies": {
     "@tsconfig/node22": "^22.0.0",
+    "@types/lodash-es": "^4.17.12",
     "@types/node": "^22.9.3",
     "@typescript-eslint/eslint-plugin": "^8.16.0",
     "@typescript-eslint/parser": "^8.16.0",
