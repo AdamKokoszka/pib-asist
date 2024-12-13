@@ -10,6 +10,7 @@ import App from './App.vue'
 import router from './router'
 import { createI18n } from 'vue-i18n'
 import { definePreset } from '@primevue/themes'
+import { Field, Form, ErrorMessage } from 'vee-validate';
 
 const i18n = createI18n({
   locale: 'en',
@@ -37,6 +38,10 @@ const CustomAura = definePreset(Aura, {
 })
 
 const app = createApp(App)
+
+app.component('Field', Field);
+app.component('VeeForm', Form);
+app.component('ErrorMessage', ErrorMessage);
 
 app.use(createPinia())
 app.use(router)

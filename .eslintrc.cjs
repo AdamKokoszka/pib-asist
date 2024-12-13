@@ -36,6 +36,7 @@ module.exports = {
     'import/prefer-default-export': 'off',
     'prefer-promise-reject-errors': 'off',
     '@typescript-eslint/ban-ts-comment': 'off',
+    'vue/multi-word-component-names': 'off',
     'max-len': [
       'error',
       {
